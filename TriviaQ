@@ -1,0 +1,30 @@
+
+/**
+ * Write a description of class TriviaQ here.
+ *
+ */
+
+import java.util.Scanner;
+
+public class TriviaQ
+{
+   
+   public static void main(String [] args)
+   {
+       System.out.println("Guess my state!");
+       String answer = "";
+       Scanner in = new Scanner(System.in);
+       int numTries = 0;
+       answer = in.nextLine();
+       while(! answer.equalsIgnoreCase("New Mexico"))
+       {
+         System.out.println("Wrong Try Again");
+         numTries ++;
+         System.out.println("Number of Tries: " + numTries);
+         answer = in.nextLine();
+       }
+       
+       numTries++;
+       System.out.println("Correct!, it took you " + numTries + " tries ");
+   }
+}
