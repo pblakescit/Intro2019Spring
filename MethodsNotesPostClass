@@ -1,0 +1,46 @@
+
+/**
+ * @pblake
+ * Demonstration of basic method format and syntax
+ */
+public class MethodsNotes
+{
+   //Methods  of this class
+   /**
+    * This method takes in an int x as a parameter and returns an int double that value
+    * 
+    * public and static are required
+    * the first int is the return type
+    * doubleMe is the method name
+    * (int x) is the "paramter" being "passed" into the function
+    */
+   public static int doubleMe(int x)
+   {
+       return x * 2; //a return statement is required if you have a return type
+   }
+   
+   /**
+    * This method takes in a String and an int and has a void return type.
+    * The method prints a message n times greeting the name of the string.
+    */
+    
+   public static void multiplePrints(String name, int n)
+   {
+       for(int i = 1 ; i <= n; i++)
+       {
+        System.out.println("Hello " + name);
+       }
+   }
+   
+   //Method which has 2 int paramters and returns the average as an int
+   
+   //Method which has a String and an int and returns a boolean if that string is longer than the int
+    
+   //This is the main method, this is what runs when the program is executed
+   public static void main(String [] args)
+   {
+       //We can test doubleMe out down here
+       System.out.println("The value of -500 doubled is " + doubleMe(-500));
+       multiplePrints("Bepis", 10);
+   }
+}
