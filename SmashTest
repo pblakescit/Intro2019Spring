@@ -1,0 +1,23 @@
+
+/**
+ * This class tests out the SmashFighter class 
+ * constructors and methods
+ *
+ */
+public class SmashTest
+{
+   public static void main(String [] args)
+   {
+       //calling the constructor
+       SmashFighter p1 = new SmashFighter("Joker", true); //creates a smashfighter with a name Joker and isMeta is true
+       SmashFighter p2 = new SmashFighter("Little Mac", false);
+       
+       System.out.println("The name of p1 is " + p1.getName() ); //calling the getName method on the player one object
+       System.out.println("The name of p2 is " + p2.getName() );
+       
+       System.out.println("The damage of p1 is " + p1.getDamagePercent() );
+       
+       SmashFighter.attack(p1, p2);
+       System.out.println("The damage of p2 is " + p2.getDamagePercent());
+   }
+}
