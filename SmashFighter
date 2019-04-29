@@ -1,0 +1,52 @@
+
+/**
+ * Notes on classes representing objects. 
+ * @Phill Blake
+ */
+public class SmashFighter 
+{
+   //Instance Variables
+   private String name; //name of character
+   private boolean isMeta; //true or false depending on if the character is meta
+   private double damagePercent;
+   
+   //Constructors
+   /*
+    * Constructor is used to make an object of the class type.
+    * In this case it is called to make a fighter.
+    * 
+    * A constructor assigns values to the instance variables in a class.
+    * Think of it as a cookie cutter, a mold to build an object.
+    */
+   public SmashFighter(String s, boolean m) //s and m are parameters being passed into a function
+   {
+       name = s; //name gets the value of s
+       isMeta = m; //isMeta gets the value of m
+       damagePercent = 0; //damagePercent gets set to 0
+   }
+   
+   //Methods
+   
+   //Getter or Accessor Methods, allows us to access the instance variables of a SmashFighter
+   public String getName()
+   {
+       return name; //allows us to access the name of a fighter
+   }
+   
+   public double getDamagePercent()
+   {
+       return damagePercent;
+   }
+   
+   public void setDamage(double damage)
+   {
+       damagePercent += damage;
+   }
+   
+   public static void attack(SmashFighter a, SmashFighter b)
+   {
+       b.setDamage(15); //adds 15  to b's damage
+       System.out.println(a.getName() +" has hit " + b.getName() + " with an attack");
+       System.out.println("15 has been added to " + b.getName() +"'s damage");
+   }
+}
