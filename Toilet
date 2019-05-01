@@ -1,0 +1,90 @@
+
+/**
+ * This class represents a toilet and all its greatness.
+ * @Phill Blake 4/29/19
+ */
+public class Toilet
+{
+    //Instance Variables
+    private String brand;
+    private boolean isFull, isClogged;
+    private double capacity, wasteLevel;
+    
+    
+    //Constructors 
+    //No argument (No args) constructor
+    public Toilet() //Within the contructor all instance variables are set
+    {
+        brand = "American Standard";
+        isFull = false;
+        isClogged = false;
+        capacity = 6.0; //gallons
+        wasteLevel = 0;
+    }
+    
+    //Constructor with arguments
+    public Toilet(String b, double c, double w)
+    {
+        brand = b;
+        isFull = false;
+        isClogged = false;
+        capacity = c;
+        wasteLevel = w; 
+    }
+    
+    //Getter Methods (return types are the same as the instance variable you are accessing 
+    public boolean getIsClogged() //returns the value of the isClogged variable
+    {
+        return isClogged;
+    }
+    public double getCapacity()
+    {
+        return capacity;
+    }
+    public double getWasteLevel()
+    {
+        return wasteLevel;
+    }
+    public boolean getIsFull()
+    {
+        return isFull;
+    }
+    public String getBrand()
+    {
+        return brand;
+    }
+    
+    //Mutator Methods aka Setter Methods which change the instance variables of the 
+    public void flush()
+    {
+        if(wasteLevel > capacity)
+        {
+            isClogged = true;
+        }
+        
+        
+        if(isClogged)
+        {
+            System.out.println("Bummer dude, the throne is clogged");
+        }
+        else
+        {
+            wasteLevel = 0;
+            System.out.println("Successful flush!");
+        }
+    }
+    
+    public void use()
+    {
+        double useSize = Math.random() * 4.0;
+        System.out.println("Successful use of " + useSize + " waste units");
+        wasteLevel += useSize;
+        
+        if(wasteLevel > capacity)
+        {
+            System.out.println("Oh no! overflow situation");
+        }
+        
+    }
+    
+}
